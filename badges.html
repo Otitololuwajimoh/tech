@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Badges with Celebrating Ribbons</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #1e1e2f;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .badge-section {
+        width: 80%;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: #252539;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+
+    h1.heading {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #ff6b6b;
+    }
+
+    /* Ribbon Animation */
+    .ribbons-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        pointer-events: none;
+        overflow: hidden;
+    }
+
+    .ribbon {
+        position: absolute;
+        top: -10%;
+        width: 20px;
+        height: 100px;
+        background-color: #ff6b6b;
+        opacity: 0.8;
+        animation: fall 5s infinite ease-in;
+    }
+
+    .ribbon:nth-child(2) {
+        left: 20%;
+        width: 15px;
+        background-color: #ff9e9e;
+        animation-duration: 6s;
+    }
+
+    .ribbon:nth-child(3) {
+        left: 40%;
+        width: 10px;
+        background-color: #ffbdbd;
+        animation-duration: 4s;
+    }
+
+    .ribbon:nth-child(4) {
+        left: 60%;
+        width: 25px;
+        background-color: #ffc0cb;
+        animation-duration: 7s;
+    }
+
+    .ribbon:nth-child(5) {
+        left: 80%;
+        width: 20px;
+        background-color: #ffd1dc;
+        animation-duration: 5.5s;
+    }
+
+    @keyframes fall {
+        0% {
+            transform: translateY(-100vh) rotate(0deg);
+        }
+
+        100% {
+            transform: translateY(100vh) rotate(720deg);
+        }
+    }
+
+    /* Badge Cards Styling */
+    .badge-card {
+        background-color: #303048;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .badge-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .badge-icon {
+        background-color: #ff6b6b;
+        padding: 15px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 40px;
+        color: #ffffff;
+        margin-right: 20px;
+    }
+
+    .badge-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .badge-title {
+        font-size: 22px;
+        color: #ffffff;
+    }
+
+    .description {
+        font-size: 16px;
+        color: #a9a9c1;
+        margin: 10px 0;
+    }
+
+    .date {
+        font-size: 14px;
+        color: #a9a9c1;
+    }
+
+    /* Mini Animations */
+    .badge-card:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .badge-icon:hover {
+        background-color: #ff9e9e;
+        transition: background-color 0.5s ease;
+    }
+
+    @media (max-width: 768px) {
+        .badge-info {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .badge-icon {
+            margin-bottom: 10px;
+        }
+    }
+</style>
+
+<body>
+    <!-- Falling Ribbons -->
+    <div class="ribbons-container">
+        <div class="ribbon"></div>
+        <div class="ribbon"></div>
+        <div class="ribbon"></div>
+        <div class="ribbon"></div>
+        <div class="ribbon"></div>
+    </div>
+
+    <!-- Badge Section -->
+    <div class="badge-section">
+        <h1 class="heading">Student Badges</h1>
+
+        <!-- Punctual Techie Badge -->
+        <div class="badge-card">
+            <div class="badge-info">
+                <div class="badge-icon">⏰</div>
+                <div class="badge-details">
+                    <h2 class="badge-title">Punctual Techie</h2>
+                    <p class="description">Awarded for consistently being on time and submitting projects promptly.</p>
+                    <span class="date">Awarded: September 2024</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coding Ninja Badge -->
+        <div class="badge-card">
+            <div class="badge-info">
+                <div class="badge-icon">👨‍💻</div>
+                <div class="badge-details">
+                    <h2 class="badge-title">Coding Ninja</h2>
+                    <p class="description">Awarded for exceptional coding skills and problem-solving abilities.</p>
+                    <span class="date">Awarded: October 2024</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Young Web Developer Badge -->
+        <div class="badge-card">
+            <div class="badge-info">
+                <div class="badge-icon">🌐</div>
+                <div class="badge-details">
+                    <h2 class="badge-title">Young Web Developer</h2>
+                    <p class="description">Awarded for outstanding contributions in web development projects.</p>
+                    <span class="date">Awarded: November 2024</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

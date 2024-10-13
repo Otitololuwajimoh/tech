@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDUCA Navbar</title>
+    
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#blur-background {
+    transition: filter 0.5s ease;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004080;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right .leave-button {
+    background-color: #ff3333;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar-right .leave-button:hover {
+    background-color: #cc0000;
+}
+
+.iframe-container {
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Badge Popup */
+/* Badge Popup */
+.badge-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-out;
+}
+
+.badge-image {
+    width: 120px; /* Increased icon size */
+    height: 120px;
+    margin-bottom: 5px; /* Reduced space between icon and text */
+}
+
+.badge-title {
+    font-size: 24px;
+    margin: 5px 0; /* Reduced space between title and description */
+    color: #333;
+}
+
+.badge-description {
+    font-size: 16px;
+    color: #555;
+    margin-top: 5px; /* Reduced space between title and description */
+}
+
+/* Popup visible class */
+.show-badge {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Blur background */
+.blur {
+    filter: blur(5px);
+}
+
+</style>
+<body>
+    <div id="blur-background">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <img src="logo.png" alt="EDUCA Logo" class="logo">
+                <span class="brand-name">EDUCA</span>
+            </div>
+            <div class="navbar-right">
+                <a href="home.html" class="leave-button" id="leave-button">Leave</a>
+            </div>
+        </nav>
+
+        <div class="iframe-container">
+            <iframe src="https://educa.whereby.com/ojtechd7b1197f-5f4e-4f6a-8513-59ea7ffd7a93"
+                allow="camera; microphone; fullscreen; speaker; display-capture; compute-pressure"
+                style="height: 700px; width: 100%;">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Code Ninja Badge Popup -->
+    <div class="badge-popup" id="badge-popup">
+        <div class="badge-content">
+            <img src="Code Class.png" alt="Ninja Icon" class="badge-image">
+            <h2 class="badge-title">Code Ninja</h2>
+            <p class="badge-description">You've earned the Code Ninja badge!</p>
+        </div>
+    </div>
+
+    
+</body>
+<script>
+    document.getElementById('leave-button').addEventListener('click', function (event) {
+            // Prevent the default leave action temporarily
+            event.preventDefault();
+
+            // Show the badge popup
+            document.getElementById('badge-popup').classList.add('show-badge');
+
+            // Blur the background content
+            document.getElementById('blur-background').classList.add('blur');
+
+            // Hide the badge and remove the blur after 7 seconds
+            setTimeout(function () {
+                document.getElementById('badge-popup').classList.remove('show-badge');
+                document.getElementById('blur-background').classList.remove('blur');
+
+                // Redirect to home page after showing the badge
+                window.location.href = "home.html";
+            }, 7000);
+        });
+
+</script>
+</html>

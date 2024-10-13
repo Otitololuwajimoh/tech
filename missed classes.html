@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missed Classes</title>
+
+    <!-- Font Awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/6707effdbae6c3742d766bab/1i9rgq8ah';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1e1e2f;
+            /* Dark theme background */
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .missed-classes {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #252539;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        h1.heading {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #ff6b6b;
+            /* Light red */
+        }
+
+        .class-list {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+
+        .class-item {
+            background-color: #303048;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .color-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(270deg, #ff6b6b, #ff9e9e, #ffbdbd);
+            animation: slide-color 5s infinite ease-in-out;
+            opacity: 0.2;
+            /* Subtle effect */
+            z-index: 0;
+        }
+
+        @keyframes slide-color {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        .class-info {
+            display: flex;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .class-icon {
+            background-color: #ff6b6b;
+            /* Red background for missed classes */
+            padding: 15px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            color: #ffffff;
+            margin-right: 20px;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .class-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .date {
+            font-size: 14px;
+            color: #a9a9c1;
+            margin-bottom: 8px;
+        }
+
+        .status {
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #ffffff;
+            background-color: #e74c3c;
+            /* Red for missed classes */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .class-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .class-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .class-icon {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="missed-classes">
+        <h1 class="heading">Missed Classes</h1>
+
+        <ol class="class-list">
+            <li class="class-item">
+                <div class="color-slide"></div> <!-- Sliding color effect -->
+
+                <div class="class-info">
+                    <div class="class-icon">
+                        <i class="fas fa-code"></i> <!-- Icon for missed class -->
+                    </div>
+                    <div class="details">
+                        <h3 class="class-title">Advanced JavaScript</h3>
+                        <p class="date">Scheduled on: September 15, 2024</p>
+                        <p class="status">Status: Missed</p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="class-item">
+                <div class="color-slide"></div> <!-- Sliding color effect -->
+
+                <div class="class-info">
+                    <div class="class-icon">
+                        <i class="fas fa-laptop-code"></i> <!-- Icon for missed class -->
+                    </div>
+                    <div class="details">
+                        <h3 class="class-title">Intro to Web Development</h3>
+                        <p class="date">Scheduled on: September 10, 2024</p>
+                        <p class="status">Status: Missed</p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="class-item">
+                <div class="color-slide"></div> <!-- Sliding color effect -->
+
+                <div class="class-info">
+                    <div class="class-icon">
+                        <i class="fas fa-cloud"></i> <!-- Icon for missed class -->
+                    </div>
+                    <div class="details">
+                        <h3 class="class-title">Cloud Computing Basics</h3>
+                        <p class="date">Scheduled on: September 5, 2024</p>
+                        <p class="status">Status: Missed</p>
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </section>
+
+</body>
+
+</html>

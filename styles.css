@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e2f;
+    /* Dark background */
+    color: #ffffff;
+    /* White text for contrast */
+}
+
+.class-dashboard {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #252539;
+    /* Slightly lighter dark background */
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #c4b5fd;
+    /* Light purple heading */
+}
+
+.overview-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.overview-card {
+    background-color: #303048;
+    /* Card background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    flex: 1;
+    margin: 10px;
+    color: #e0e0e0;
+}
+
+.overview-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #c4b5fd;
+    /* Light purple heading */
+}
+
+.overview-card p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    /* White text */
+}
+
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.class-card {
+    background-color: #303048;
+    /* Dark card background */
+    width: 30%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.class-card:hover {
+    transform: translateY(-5px);
+}
+
+.class-icon {
+    background-color: #3e3e5e;
+    /* Slightly lighter dark background for icons */
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: #bb86fc;
+    /* Purple color for icons */
+}
+
+.class-info {
+    padding: 20px;
+}
+
+.class-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    /* White text */
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.status.completed {
+    background-color: #bb86fc;
+    /* Purple for completed */
+    color: #1e1e2f;
+    /* Dark text for contrast */
+}
+
+.status.ongoing {
+    background-color: #ff79c6;
+    /* Pink-purple for ongoing */
+    color: #1e1e2f;
+    /* Dark text for contrast */
+}
+
+.class-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+    /* Darker border */
+}
+
+.class-details p {
+    font-size: 16px;
+    color: #c4b5fd;
+    /* Light purple text */
+}
+
+.class-details .date {
+    font-size: 14px;
+    color: #a9a9c1;
+    /* Grey-purple for date */
+}
+
+.class-details:last-child {
+    border-bottom: none;
+}
+
+.join-btn {
+    padding: 8px 15px;
+    background-color: #bb86fc;
+    /* Purple join button */
+    color: #1e1e2f;
+    /* Dark text */
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.join-btn:hover {
+    background-color: #9d68e2;
+    /* Darker purple on hover */
+    transition: 0.3s;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .class-card {
+        width: 45%;
+        /* 2 cards per row for medium screens */
+    }
+
+    .overview-container {
+        flex-wrap: wrap;
+    }
+
+    .overview-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .class-card {
+        width: 100%;
+        /* 1 card per row for smaller screens */
+    }
+
+    .overview-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .class-info h3 {
+        font-size: 18px;
+    }
+
+    .status {
+        font-size: 10px;
+    }
+
+    .overview-card h3 {
+        font-size: 16px;
+    }
+
+    .overview-card p {
+        font-size: 20px;
+    }
+}

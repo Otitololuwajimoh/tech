@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Classes</title>
+
+    <!-- Font Awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1e1e2f;
+            /* Dark background */
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .upcoming-classes {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #252539;
+            /* Slightly lighter dark background */
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        h1.heading {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #c4b5fd;
+            /* Light purple */
+        }
+
+        .class-list {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+
+        .class-item {
+            background-color: #303048;
+            /* Dark card background */
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            animation: animate-bg 3s infinite alternate;
+            /* Color animation */
+        }
+
+        @keyframes animate-bg {
+            0% {
+                background-color: #303048;
+            }
+
+            100% {
+                background-color: #3a3a5f;
+            }
+        }
+
+        .class-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .class-info {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .class-icon {
+            background-color: #3e3e5e;
+            padding: 15px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            color: #bb86fc;
+            /* Purple icon */
+            margin-right: 20px;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .class-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .date {
+            font-size: 14px;
+            color: #a9a9c1;
+            /* Grey-purple */
+            margin-bottom: 8px;
+        }
+
+        .status {
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #ffffff;
+            background-color: #f39c12;
+            /* Orange for upcoming status */
+        }
+
+        .icon-btn {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #bb86fc;
+            /* Purple background */
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .icon-btn i {
+            margin-right: 10px;
+        }
+
+        .icon-btn:hover {
+            background-color: #a076f1;
+            /* Hover state for button */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .class-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .class-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .class-icon {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="upcoming-classes">
+        <h1 class="heading">Upcoming Classes</h1>
+
+        <ol class="class-list">
+            <li class="class-item">
+                <div class="class-info">
+                    <div class="class-icon">
+                        <i class="fas fa-database"></i> <!-- Icon for the upcoming class -->
+                    </div>
+                    <div class="details">
+                        <h3 class="class-title">Database Management Systems</h3>
+                        <p class="date">Scheduled on: September 30, 2024</p>
+                        <p class="status upcoming">Status: Upcoming</p>
+                    </div>
+                </div>
+                <a href="#" class="icon-btn">
+                    <i class="fas fa-calendar-check"></i> Join Class
+                </a>
+            </li>
+
+            <li class="class-item">
+                <div class="class-info">
+                    <div class="class-icon">
+                        <i class="fas fa-network-wired"></i> <!-- Icon for the upcoming class -->
+                    </div>
+                    <div class="details">
+                        <h3 class="class-title">Networking Fundamentals</h3>
+                        <p class="date">Scheduled on: October 2, 2024</p>
+                        <p class="status upcoming">Status: Upcoming</p>
+                    </div>
+                </div>
+                <a href="#" class="icon-btn">
+                    <i class="fas fa-calendar-check"></i> Join Class
+                </a>
+            </li>
+
+            <li class="class-item">
+                <div class="class-info">
+                    <div class="class-icon">
+                        <i class="fas fa-cloud"></i> <!-- Icon for the upcoming class -->
+                    </div>
+                    <div class="details">
+                        <h3 class="class-title">Cloud Computing Basics</h3>
+                        <p class="date">Scheduled on: October 5, 2024</p>
+                        <p class="status upcoming">Status: Upcoming</p>
+                    </div>
+                </div>
+                <a href="#" class="icon-btn">
+                    <i class="fas fa-calendar-check"></i> Join Class
+                </a>
+            </li>
+
+        </ol>
+    </section>
+
+</body>
+
+</html>
